@@ -1,0 +1,17 @@
+queue:
+#include <queue>
+
+queue<int*> q;
+if(!q.empty()) return;
+q.push()
+q.pop() //returns null
+q.front() //takes a pick
+
+
+
+
+
+
+
+iterator: *it can be assigned like a normal pointer
+
