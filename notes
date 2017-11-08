@@ -13,5 +13,35 @@ q.front() //takes a pick
 
 
 
+
 iterator: *it can be assigned like a normal pointer
 
+
+
+########################THESE ARE NOT SAFE TO USE:
+set max and min in C++
+#include <limits>
+double max = std::numeric_limits<double>::max();
+double inf = std::numeric_limits<double>::infinity();
+double inf = std::numeric_limits<int>::infinity();
+#######################THESE ARE NOT SAFE TO USE:
+
+
+vector<int>a; 
+a.size() //gives int
+a.empty() //gives bool
+
+
+#include <unordered_set>
+
+
+copy set to vector: You need to specify the vector size before hand. Vector has size 0 initially unless you change it!
+	vector<int> intersect_vect(intersect.size());
+	copy(intersect.begin(), intersect.end(), intersect_vect.begin());
+
+
+check if set contains the item:
+if( mySet.find(elem) != mySet.end() ) then it contains and mySet.find() returns and iter to that element
+
+mySet.erase(item);
+mySet.insert(item);

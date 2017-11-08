@@ -1,40 +1,31 @@
 #include <iostream>
 #include <vector>
+#include <unordered_set>
+#include <algorithm>
 using namespace std;
 
-vector<int>& moveZeroes(vector<int>& nums)
-{
-	auto boz = nums.begin();
-	auto eoz = nums.begin();
-	while(eoz !=nums.end()){
-		for(auto i=nums.begin(); i!=nums.end();i++)
-			cout<<*i<<' ';
-		cout<<endl;
-		
-		//eoz++;
-		if(*eoz==0){
-			eoz++;
-			continue;
-		}
-		
-		int tmp = *eoz;
-		*eoz = *boz;
-		*boz = tmp;
-
-		eoz++;
-		boz++;
+vector<int> intersection(vector<int>& nums1, vector<int>& nums2){
+	unordered_set<int> intersect;
+	for(auto iter=nums1.begin();iter!=nums1.end();++iter){
+		if(find( nums2.begin(), nums2.end() , *iter)!=nums2.end())
+			intersect.insert(*iter);
 	}
-	return nums;
+	
+	
+	vector<int> intersect_vect(intersect.size());
+	copy(intersect.begin(), intersect.end(), intersect_vect.begin());
+	return intersect_vect;
 }
-
+    
+    
 int main()
 {	
-	vector<int> vect;
-	vect.push_back(0);
+	vector<int> nums1 = {};
+	vector<int> nums2 = {5};
 	
-	vector<int> vect2 = moveZeroes(vect);
-	for(auto i=vect2.begin(); i!=vect2.end();i++)
-		cout<<*i<<' ';
+	auto r = intersection(nums1,nums2);
+	for(auto iter=r.begin();iter!=r.end();++iter)
+		cout<<*iter<<' ';
 	cout<<endl;
 	return 0;
 }
