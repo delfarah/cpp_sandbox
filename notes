@@ -66,3 +66,7 @@ if(found != string::npos)
 str.erase(str.end()-1) //removes the last
 str.erase(str.begin()) //removes the first
 
+
+
+Vector sort:
+std::sort() //sorts a vector in place
