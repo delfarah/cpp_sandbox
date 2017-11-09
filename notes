@@ -45,3 +45,24 @@ if( mySet.find(elem) != mySet.end() ) then it contains and mySet.find() returns 
 
 mySet.erase(item);
 mySet.insert(item);
+
+
+
+
+
+
+
+#include <string>
+search string: 
+found = str.find('a')
+if(found == string::npos)
+
+str.erase(found) //removes from the current up to the end
+//remove the first occurance of found, found is a size_t it is index not iterator
+auto found = str.find('s');
+if(found != string::npos)
+	str.erase(found,1);
+
+str.erase(str.end()-1) //removes the last
+str.erase(str.begin()) //removes the first
+
