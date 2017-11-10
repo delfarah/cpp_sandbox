@@ -70,3 +70,27 @@ str.erase(str.begin()) //removes the first
 
 Vector sort:
 std::sort() //sorts a vector in place
+
+#include<unordered_map>
+auto found = myMap.find(elem); //found will be a pair
+if(found == myMap.end()) then ... //not found new entry
+myMap.insert({*iter, 1});
+found->second++; found->first++; access to pair elems in the unordered map
+
+
+
+In a bst, all elements to the left are smaller than the current node and all elements in the right are greater than the nodes in the left.
+Inorder traversal (root in the middle) of a BST will give the elements in sorted order
+
+
+append two vectors:
+sorted.insert(sorted.end(), tmp2.begin(), tmp2.end());
+
+
+search in vector: find(vect.begin(), vect.end(), 5);
+
+string reference by index str.at(i) or str[i]
+
+
+
+set<string> s(v.begin(), v.end());
